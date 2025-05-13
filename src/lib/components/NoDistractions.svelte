@@ -1,4 +1,18 @@
+<script>
+  import "aos/dist/aos.css";
+  import AOS from "aos";
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once
+    });
+  });
+</script>
+
 <div
+  data-aos="fade-up"
   class="w-[470px] h-[345px] rounded-[20px] text-white flex flex-col transition-all duration-200 ease-in hover:-translate-y-[5px] hover:shadow-[0_0_30px_#080A62]"
   style="background-image: url('/Home Page Gradient Product 4.png'); background-size: cover;"
 >

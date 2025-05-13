@@ -1,9 +1,19 @@
-
 <script>
     import FiltersList from "./FiltersList.svelte";
-</script>
+    import 'aos/dist/aos.css';
+    import AOS from 'aos';
+    import { onMount } from 'svelte';
+  
+    onMount(() => {
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Whether animation should happen only once
+      });
+    });
+  </script>
 
-<div class="filterscard-container">
+
+<div class="filterscard-container" data-aos="fade-up">
     <div class="image">
         <FiltersList />
         <FiltersList reverse={true} />

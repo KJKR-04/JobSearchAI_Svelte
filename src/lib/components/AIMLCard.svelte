@@ -1,4 +1,16 @@
-<div class="container">
+<script>
+    import 'aos/dist/aos.css';
+    import AOS from 'aos';
+    import { onMount } from 'svelte';
+    onMount(() => {
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Whether animation should happen only once
+      });
+    });
+  </script>
+
+<div class="container" data-aos="fade-up">
     <div class="image">
         <span class="typing-big">AI ML</span><img src="/Cursor.png" alt="" />
     </div>

@@ -8,7 +8,15 @@
     import SpeedCard from "$lib/components/SpeedCard.svelte";
     import { appStore } from "$lib/stores/appStore";
     import { writable } from "svelte/store";
+    import { onMount } from 'svelte';
+    import  AOS  from "aos";
 
+    onMount(() => {
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Whether animation should happen only once
+      });
+    });
     let searchQuery = "";
 
     function handleSearch() {
@@ -26,7 +34,7 @@
 
 <div
     id="search"
-    class="animate-appear w-full max-w-[1800px] flex flex-col items-center justify-evenly gap-16 mx-4 px-10 py-20 rounded-2xl text-white border bg-cover bg-center bg-no-repeat"
+    class="animate-appear w-full max-w-[1800px] flex flex-col items-center justify-evenly gap-16 px-10 py-20 rounded-2xl text-white border bg-cover bg-center bg-no-repeat"
     style="background-image: url('/search.svg'); background-size: cover;"
 >
     <h1 class="text-[70px] max-w-[920px] font-bold text-center">
@@ -80,6 +88,7 @@
     </div>
     <a href="#navbar">
         <button
+        data-aos="fade-up"
         on:click={()=>{
             document.getElementById("input-box").focus()
         }}
