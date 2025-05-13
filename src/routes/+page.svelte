@@ -1,6 +1,11 @@
 <script>
     import { goto } from "$app/navigation";
     import AimlCard from "$lib/components/AIMLCard.svelte";
+    import FiltersCard from "$lib/components/FiltersCard.svelte";
+    import FreshnessClock from "$lib/components/FreshnessClock.svelte";
+    import NoDistractions from "$lib/components/NoDistractions.svelte";
+    import ResumeReady from "$lib/components/ResumeReady.svelte";
+    import SpeedCard from "$lib/components/SpeedCard.svelte";
     import { appStore } from "$lib/stores/appStore";
     import { writable } from "svelte/store";
 
@@ -15,11 +20,12 @@
     }
 </script>
 
-<div class="flex-row justify-left w-full px-10 m-5">
+<div id="navbar" class="flex-row justify-left w-full px-10 m-5">
     <img src="/LogoFull.svg" alt="" />
 </div>
 
 <div
+    id="search"
     class="animate-appear w-full max-w-[1800px] flex flex-col items-center justify-evenly gap-16 mx-4 px-10 py-20 rounded-2xl text-white border bg-cover bg-center bg-no-repeat"
     style="background-image: url('/search.svg'); background-size: cover;"
 >
@@ -36,7 +42,8 @@
     >
         <input
             type="text"
-            placeholder="Enter text"
+            placeholder="I'm looking for an Entry level Project manager in California"
+            id="input-box"
             class="flex-1 bg-black text-white pl-8 border-none outline-none"
             bind:value={searchQuery}
             on:keydown={(e) => e.key === "Enter" && handleSearch()}
@@ -52,10 +59,33 @@
 <div
     class="flex flex-col items-center justify-center w-[100%] py-[100px] px-10 border p-y-[10px]"
 >
-    <h1 class="text-[50px] font-[500] " >  Meet <span class="text-[#5C28DF]" >JobSearchAI</span> </h1>
-    <p class="max-w-[630px] text-center m-[50px]">
-        JobSearchAI is our proprietary semantic search technology built to cut through the noise. It understands what you mean—not just what you type.
+    <h1 class="text-[50px] font-[600]">
+        Meet <span class="text-[#5C28DF]">JobSearchAI</span>
+    </h1>
+    <p class="max-w-[630px] font-[600] text-center m-[50px]">
+        JobSearchAI is our proprietary semantic search technology built to cut
+        through the noise. It understands what you mean—not just what you type.
     </p>
-    <AimlCard />
-    
+    <div class="flex gap-[20px]">
+        <div class="flex flex-col gap-[20px]">
+            <AimlCard />
+            <FiltersCard />
+            <ResumeReady />
+        </div>
+        <div class="flex flex-col gap-[20px]">
+            <SpeedCard />
+            <NoDistractions />
+            <FreshnessClock />
+        </div>
+    </div>
+    <a href="#navbar">
+        <button
+        on:click={()=>{
+            document.getElementById("input-box").focus()
+        }}
+            class=" rounded-[35px] my-[50px] text-[25px] px-[20px] py-[10px] font-[500] bg-[black] text-[white]"
+        >
+            Try Now
+        </button>
+    </a>
 </div>
