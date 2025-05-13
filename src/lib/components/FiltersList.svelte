@@ -26,6 +26,9 @@
   </div>
   
   <style>
+    div{
+      color:white;
+    }
     .filterslist-container {
       animation: scroll 20s linear infinite;
     }

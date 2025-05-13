@@ -13,7 +13,7 @@
 
 <div
   data-aos="fade-up"
-  class="w-[470px] h-[345px] rounded-[20px] text-white flex flex-col transition-all duration-200 ease-in hover:-translate-y-[5px] hover:shadow-[0_0_30px_#080A62]"
+  class="container w-[470px] h-[345px] rounded-[20px] text-white flex flex-col transition-all duration-200 ease-in hover:-translate-y-[5px] hover:shadow-[0_0_30px_#080A62]"
   style="background-image: url('/Home Page Gradient Product 4.png'); background-size: cover;"
 >
   <div class="mt-[25px] ml-[50px]">
@@ -27,3 +27,13 @@
     <div>No ads. No pay-to-play listings. Ever.</div>
   </div>
 </div>
+
+<style>
+    .container {
+    transition: 200ms ease !important;
+  }
+  .container:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0px 0px 30px #080a62;
+  }
+</style>

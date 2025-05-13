@@ -1,7 +1,7 @@
 <script>
   import "aos/dist/aos.css";
   import AOS from "aos";
-  import { onMount } from 'svelte';
+  import { onMount } from "svelte";
 
   onMount(() => {
     AOS.init({
@@ -13,7 +13,8 @@
 
 <div
   data-aos="fade-up"
-  class="flex flex-col justify-between text-white max-w-[470px] w-full h-[230px] gap-5 p-[30px] rounded-[20px] transition-all duration-200 ease-in hover:-translate-y-[5px] hover:shadow-[0_0_30px_#080A62] bg-cover"
+  id="container"
+  class="container flex flex-col justify-between text-white max-w-[470px] w-full h-[230px] gap-5 p-[30px] rounded-[20px] bg-cover"
   style="background-image: url('/Home Page Gradient Product 3.png');"
 >
   <div class="flex items-center justify-center h-full">
@@ -29,3 +30,13 @@
     <p class="mt-0">One click. No middlemen. Straight to apply.</p>
   </div>
 </div>
+
+<style>
+  .container {
+    transition: 200ms ease !important;
+  }
+  .container:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0px 0px 30px #080a62;
+  }
+</style>

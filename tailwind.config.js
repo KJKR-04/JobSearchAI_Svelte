@@ -24,5 +24,8 @@ module.exports = {
       },
     },
   },
+  safelist: [
+    'text-[white]',
+  ],
   plugins: [],
 };
