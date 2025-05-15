@@ -14,20 +14,20 @@
 <div
   data-aos="fade-up"
   id="container"
-  class="container flex flex-col justify-between text-white max-w-[470px] w-full h-[230px] gap-5 p-[30px] rounded-[20px] bg-cover"
+  class="container w-[90%] sm:w-[470px] h-[200px] sm:h-[230px] gap-4 sm:gap-5 p-[20px] sm:p-[30px] rounded-[15px] sm:rounded-[20px] bg-cover flex flex-col justify-between text-white"
   style="background-image: url('/Home Page Gradient Product 3.png');"
 >
   <div class="flex items-center justify-center h-full">
     <button
-      class="text-[18px] font-normal bg-black text-white border-none max-w-[160px] w-full h-[60px] rounded-full"
+      class="text-[16px] sm:text-[18px] font-normal bg-black text-white border-none max-w-[140px] sm:max-w-[160px] w-full h-[50px] sm:h-[60px] rounded-full"
     >
       Apply Now ↗
     </button>
   </div>
 
-  <div class="flex flex-col justify-center text-[18px] tracking-[-0.05em]">
-    <b class="text-[20px]">Direct Apply Only</b>
-    <p class="mt-0">One click. No middlemen. Straight to apply.</p>
+  <div class="flex flex-col justify-center text-[14px] sm:text-[18px] tracking-[-0.05em]">
+    <b class="text-[16px] sm:text-[20px]">Direct Apply Only</b>
+    <p class="mt-0 text-[12px] sm:text-[16px]">One click. No middlemen. Straight to apply.</p>
   </div>
 </div>
 

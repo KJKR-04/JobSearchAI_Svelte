@@ -3,67 +3,45 @@
     import 'aos/dist/aos.css';
     import AOS from 'aos';
     import { onMount } from 'svelte';
-  
+
     onMount(() => {
-      AOS.init({
-        duration: 1000, // Animation duration in milliseconds
-        once: true, // Whether animation should happen only once
-      });
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true, // Whether animation should happen only once
+        });
     });
-  </script>
+</script>
 
-
-<div class="filterscard-container" data-aos="fade-up">
-    <div class="image">
+<div
+    class="filterscard-container w-[90%] sm:w-[470px] h-[200px] sm:h-[214px] rounded-[15px] sm:rounded-[20px] bg-cover text-white overflow-hidden flex flex-col transition-all duration-200 ease-in hover:-translate-y-[5px] hover:shadow-[0_0_30px_#080A62]"
+    data-aos="fade-up"
+    style="background-image: url('/Home Page Gradient Product 3.png');"
+>
+    <div class="image mt-[10px] sm:mt-[14px] flex flex-col gap-[8px] sm:gap-[10px]">
         <FiltersList />
         <FiltersList reverse={true} />
     </div>
-    <div class="content">
-        <span>50+ Smart Filters</span>
-        <div>Nail the right job with H1B, stage, salary & more.</div>
+    <div class="content m-[20px] sm:m-[30px] text-[14px] sm:text-[18px]">
+        <span class="block mt-[5px] sm:mt-[10px] text-left font-bold">
+            50+ Smart Filters
+        </span>
+        <div class="text-[12px] sm:text-[16px]">
+            Nail the right job with H1B, stage, salary & more.
+        </div>
     </div>
 </div>
 
 <style>
+    .filterscard-container {
+        transition: 200ms ease !important;
+    }
 
-.filterscard-container {
-    width: 470px;
-    height: 214px;
-    border-radius: 20px;
-    background: url('/Home Page Gradient Product 3.png');
-    letter-spacing: -0.05em;
-    color: white;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: 200ms ease !important;
+    .filterscard-container:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0px 0px 30px #080A62;
+    }
 
-}
-
-.filterscard-container:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0px 0px 30px #080A62;
-}
-
-.filterscard-container .image {
-    height: fit-content;
-    margin-top: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.filterscard-container .content {
-    margin: 30px;
-    font-size: 18px;
-
-}
-
-.filterscard-container .content span {
-    /* width: 352px; */
-    margin-top: 10px;
-    text-align: left;
-    font-weight: 700;
-}
-
+    .filterscard-container .image {
+        height: fit-content;
+    }
 </style>
